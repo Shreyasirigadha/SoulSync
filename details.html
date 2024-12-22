@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #aad7e4;
+        }
+        h4{
+            font-size: 50px;
+            text-align: center;
+            margin:0px;
+        }
+        form{
+            border: 2px solid black;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-left: 300px;
+            width: 900px;
+            height: 800px;
+            font-size: 20px;
+            background-color: linear-gradient(to bottom, #ebe2f4,#83c3ed);;
+        }
+    </style>
+</head>
+<body>
+    <h4>Personal Details</h4>
+    <form action="backend.php">
+        <div>
+            <label for="name">NAME:</label>
+            <input type="text" name="name" id="name">
+        </div>
+       
+        <br>
+        <div>
+            <label for="db">DATE OF BIRTH:</label>
+            <input type="date" name="db" id="db">
+        </div>
+        <br>
+        <div>
+            <label for="gender">GENDER:</label>
+            <input type="radio" name="gender" id="gender" >male
+            <input type="radio" name="gender" id="gender">female
+        </div>
+        <br>
+        <div>
+            <label for="email">EMAIL:</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <br>
+        <div>
+            <label for="write">WRITE ABOUT YOURSELF:</label>
+            <br>
+            <textarea name="write" id="write" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="SUBMIT">
+        </div>
+        <br>
+        <div>
+            <input type="reset" value="RESET">
+        </div>
+    </form>
+</body>
+</html>

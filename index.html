@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Questionnaire</title>
+<!--    <link rel="stylesheet" href="styles.css">  Add any CSS styling you need -->
+
+   
+
+    <style>
+    .line-space {
+        margin-bottom: 30px; /* Adjust the value as needed */
+    }
+    /* Apply a gradient background color */
+body {
+    background: linear-gradient(to bottom, #b8f6f6, #e8f9fa);
+    font-family: Arial, sans-serif; /* Change the font-family as needed */
+    color: #333; /* Change text color as needed */
+    text-align: center;
+    padding: 20px;
+}
+#questionnaire-form {
+    text-align: left; /* Reset text alignment for questions */
+    margin: 0 auto; /* Center the container horizontally */
+    max-width: 600px; /* Adjust the maximum width as needed */
+}
+
+/* Style radio inputs and labels */
+input[type="radio"] {
+    appearance: none; /* Remove default radio button styles */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Style checked radio inputs */
+input[type="radio"]:checked {
+    background-color: #333; /* Change to your desired color */
+    border-color: #333; /* Change to your desired color */
+}
+
+/* Style labels for radio inputs */
+label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 18px; /* Adjust font size as needed */
+    font-weight: bold; /* Optionally, make labels bold */
+}
+
+/* Adjust spacing between questions */
+.line-space {
+    margin-bottom: 20px; /* Adjust spacing as needed */
+}
+
+/* Style the "Calculate Total Score" button */
+#calculate-button {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #333; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 37%;
+}
+
+#calculate-button:hover {
+    background-color: #555; /* Change button color on hover */
+}
+/* Center the container holding the questions with equal padding */
+.formm {
+    max-width: 900px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    text-align: left; /* Reset text alignment for questions */
+    padding: 0 20px; /* Add equal padding to the right and left sides */
+    /* Add a white background to the container */
+    border-radius: 10px; /* Add rounded corners to the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: linear-gradient(to bottom, #fafbfb, #d0f6f8);
+}
+
+/* Rest of your CSS styles... */
+
+.formin{
+    padding: 30px;
+
+    
+}
+h1{
+    padding-left: 35%;
+}
+</style> 
+
+<body>
+    <div class="formm">
+        <div class="formin">
+        <form method="post" action="process_form.php">
+
+            <h1>QUESTIONNAIRE</h1>
+            <label for="question1">1: In the last month, how often have you been upset because of somrthing that happened unexpectedly?</label><br>
+        <input type="radio" id="q1_option1" name="question1" value="1"> Never
+        <input type="radio" id="q1_option2" name="question1" value="2"> Almost Never
+        <input type="radio" id="q1_option3" name="question1" value="3"> Sometimes
+        <input type="radio" id="q1_option4" name="question1" value="4"> Fairly Often
+        <input type="radio" id="q1_option5" name="question1" value="5"> Very Often<br>
+        <div class="line-space"></div>
+        
+        
+        <label for="question2">2: In the last month,how often have you felt that you that you were not able to cope with all the things that you had to do? </label><br>
+        <input type="radio" id="q2_option1" name="question2" value="1"> Never
+        <input type="radio" id="q2_option2" name="question2" value="2"> Almost Never
+        <input type="radio" id="q2_option3" name="question2" value="3"> Sometimes
+        <input type="radio" id="q2_option4" name="question2" value="4"> Fairly Often
+        <input type="radio" id="q2_option5" name="question2" value="5"> Very Often<br>
+        <div class="line-space"></div>
+        
+        <label for="question3">3: In the last month, how often have you felt that you were unable to control the important things in your life? </label><br>
+        <input type="radio" id="q3_option1" name="question3" value="1"> Never
+        <input type="radio" id="q3_option2" name="question3" value="2"> Almost Never
+        <input type="radio" id="q3_option3" name="question3" value="3"> Sometimes
+        <input type="radio" id="q3_option4" name="question3" value="4"> Fairly Often
+        <input type="radio" id="q3_option5" name="question3" value="5"> Very Often<br>
+        <div class="line-space"></div>
+        
+        <label for="question4">4: In the last month have you felt overwhelmed by all you had to do? </label><br>
+        <input type="radio" id="q4_option1" name="question4" value="1"> Never
+        <input type="radio" id="q4_option2" name="question4" value="2"> Almost Never
+        <input type="radio" id="q4_option3" name="question4" value="3"> Sometimes
+        <input type="radio" id="q4_option4" name="question4" value="4"> Fairly Often
+        <input type="radio" id="q4_option5" name="question4" value="5"> Very Often<br>
+        <div class="line-space"></div>
+        
+        <label for="question5">5: In the last month, how often have you felt that you were on top of things? </label><br>
+        <input type="radio" id="q5_option1" name="question5" value="1"> Never
+        <input type="radio" id="q5_option2" name="question5" value="2"> Almost Never
+        <input type="radio" id="q5_option3" name="question5" value="3"> Sometimes
+        <input type="radio" id="q5_option4" name="question5" value="4"> Fairly Often
+        <input type="radio" id="q5_option5" name="question5" value="5"> Very Often<br>
+        <div class="line-space"></div>
+        
+        <label for="question6">6: In the last month, i have felt that i'm not part of any group </label><br>
+        <input type="radio" id="q6_option1" name="question6" value="1"> Never
+        <input type="radio" id="q6_option2" name="question6" value="2"> Almost Never
+        <input type="radio" id="q6_option3" name="question6" value="3"> Sometimes
+        <input type="radio" id="q6_option4" name="question6" value="4"> Fairly Often
+        <input type="radio" id="q6_option5" name="question6" value="5"> Very Often<br>
+        <div class="line-space"></div>
+        
+        <label for="question7">7: In the last month, i have felt that i lack companionship </label><br>
+        <input type="radio" id="q7_option1" name="question7" value="1"> Never
+        <input type="radio" id="q7_option2" name="question7" value="2"> Almost Never
+        <input type="radio" id="q7_option3" name="question7" value="3"> Sometimes
+        <input type="radio" id="q7_option4" name="question7" value="4"> Fairly Often
+        <input type="radio" id="q7_option5" name="question7" value="5"> Very Often<br>
+        <div class="line-space"></div>
+        
+        <label for="question8">8: In the last month, i have felt I'm isolated from others</label><br>
+        <input type="radio" id="q8_option1" name="question8" value="1"> Never
+        <input type="radio" id="q8_option2" name="question8" value="2"> Almost Never
+        <input type="radio" id="q8_option3" name="question8" value="3"> Sometimes
+        <input type="radio" id="q8_option4" name="question8" value="4"> Fairly Often
+        <input type="radio" id="q8_option5" name="question8" value="5"> Very Often<br>
+        <div class="line-space"></div>
+        
+        <label for="question9">9: In the last month, i have felt that im felt out </label><br>
+        <input type="radio" id="q9_option1" name="question9" value="1"> Never
+        <input type="radio" id="q9_option2" name="question9" value="2"> Almost Never
+        <input type="radio" id="q9_option3" name="question9" value="3"> Sometimes
+        <input type="radio" id="q9_option4" name="question9" value="4"> Fairly Often
+        <input type="radio" id="q9_option5" name="question9" value="5"> Very Often<br>
+        <div class="line-space"></div>
+        
+        <label for="question10">10: In the last month, i have felt that i have no one to confide in </label><br>
+        <input type="radio" id="q10_option1" name="question10" value="1"> Never
+        <input type="radio" id="q10_option2" name="question10" value="2"> Almost Never
+        <input type="radio" id="q10_option3" name="question10" value="3"> Sometimes
+        <input type="radio" id="q10_option4" name="question10" value="4"> Fairly Often
+        <input type="radio" id="q10_option5" name="question10" value="5"> Very Often<br>
+        <div class="line-space"></div>
+
+        <label for="question11">11: In the last 2 weeks, i have felt that i am trapped by my responsibilites</label><br>
+        <input type="radio" id="q11_option1" name="question11" value="1"> Never
+        <input type="radio" id="q11_option2" name="question11" value="2"> Almost Never
+        <input type="radio" id="q11_option3" name="question11" value="3"> Sometimes
+        <input type="radio" id="q11_option4" name="question11" value="4"> Fairly Often
+        <input type="radio" id="q11_option5" name="question11" value="5"> Very Often<br>
+        <div class="line-space"></div>
+
+        <label for="question12">12: In the last 2 weeks,I have felt that i am under a lot of stress.</label><br>
+        <input type="radio" id="q12_option1" name="question12" value="1"> Never
+        <input type="radio" id="q12_option2" name="question12" value="2"> Almost Never
+        <input type="radio" id="q12_option3" name="question12" value="3"> Sometimes
+        <input type="radio" id="q12_option4" name="question12" value="4"> Fairly Often
+        <input type="radio" id="q12_option5" name="question12" value="5"> Very Often<br>
+        <div class="line-space"></div>
+
+        <label for="question13">13: In the last 2 weeks, i have felt that that i am unable to contol important things in my life. </label><br>
+        <input type="radio" id="q13_option1" name="question13" value="1"> Never
+        <input type="radio" id="q13_option2" name="question13" value="2"> Almost Never
+        <input type="radio" id="q13_option3" name="question13" value="3"> Sometimes
+        <input type="radio" id="q13_option4" name="question13" value="4"> Fairly Often
+        <input type="radio" id="q13_option5" name="question13" value="5"> Very Often<br>
+        <div class="line-space"></div>
+
+        <label for="question14">14: In the last 2 weeks, I have felt that i am helpless to change things.</label><br>
+        <input type="radio" id="q14_option1" name="question14" value="1"> Never
+        <input type="radio" id="q14_option2" name="question14" value="2"> Almost Never
+        <input type="radio" id="q14_option3" name="question14" value="3"> Sometimes
+        <input type="radio" id="q14_option4" name="question14" value="4"> Fairly Often
+        <input type="radio" id="q14_option5" name="question14" value="5"> Very Often<br>
+        <div class="line-space"></div>
+
+        <label for="question15">15: In the last 2 weeks, i have felt that there is nothing i can do to improve situation</label><br>
+        <input type="radio" id="q15_option1" name="question15" value="1"> Never
+        <input type="radio" id="q15_option2" name="question15" value="2"> Almost Never
+        <input type="radio" id="q15_option3" name="question15" value="3"> Sometimes
+        <input type="radio" id="q15_option4" name="question15" value="4"> Fairly Often
+        <input type="radio" id="q15_option5" name="question15" value="5"> Very Often<br>
+        <div class="line-space"></div>
+
+        <label for="question16">16: In the last 2 weeks, I have excessive or unrealistic worry about everyday events or activites.</label><br>
+        <input type="radio" id="q16_option1" name="question16" value="1"> Never
+        <input type="radio" id="q16_option2" name="question16" value="2"> Almost Never
+        <input type="radio" id="q16_option3" name="question16" value="3"> Sometimes
+        <input type="radio" id="q16_option4" name="question16" value="4"> Fairly Often
+        <input type="radio" id="q16_option5" name="question16" value="5"> Very Often<br>
+        <div class="line-space"></div>
+
+        <label for="question17">17: In the last 2 weeks, i feel on edge, keyed up, or unable to relax.</label><br>
+        <input type="radio" id="q17_option1" name="question17" value="1"> Never
+        <input type="radio" id="q17_option2" name="question17" value="2"> Almost Never
+        <input type="radio" id="q17_option3" name="question17" value="3"> Sometimes
+        <input type="radio" id="q17_option4" name="question17" value="4"> Fairly Often
+        <input type="radio" id="q17_option5" name="question17" value="5"> Very Often<br>
+        <div class="line-space"></div>
+
+        <label for="question18">18: In the last 2 weeks, i feel easily annoyed or angered. </label><br>
+        <input type="radio" id="q18_option1" name="question18" value="1"> Never
+        <input type="radio" id="q18_option2" name="question18" value="2"> Almost Never
+        <input type="radio" id="q18_option3" name="question18" value="3"> Sometimes
+        <input type="radio" id="q18_option4" name="question18" value="4"> Fairly Often
+        <input type="radio" id="q18_option5" name="question18" value="5"> Very Often<br>
+        <div class="line-space"></div>
+
+        <label for="question19">19: In the last 2 weeks, i feel tired, run down, or having a lack of energy.</label><br>
+        <input type="radio" id="q19_option1" name="question19" value="1"> Never
+        <input type="radio" id="q19_option2" name="question19" value="2"> Almost Never
+        <input type="radio" id="q19_option3" name="question19" value="3"> Sometimes
+        <input type="radio" id="q19_option4" name="question19" value="4"> Fairly Often
+        <input type="radio" id="q19_option5" name="question19" value="5"> Very Often<br>
+        <div class="line-space"></div>
+
+        <label for="question20">20: In the last 2 weeks,I have trouble focusing or completing tasks.</label><br>
+        <input type="radio" id="q20_option1" name="question20" value="1"> Never
+        <input type="radio" id="q20_option2" name="question20" value="2"> Almost Never
+        <input type="radio" id="q20_option3" name="question20" value="3"> Sometimes
+        <input type="radio" id="q20_option4" name="question20" value="4"> Fairly Often
+        <input type="radio" id="q20_option5" name="question20" value="5"> Very Often<br>
+        <div class="line-space"></div>
+
+        <label for="question21">21: In the last 2 weeks, i have felt empty and numb.</label><br>
+        <input type="radio" id="q21_option1" name="question21" value="1"> Never
+        <input type="radio" id="q21_option2" name="question21" value="2"> Almost Never
+        <input type="radio" id="q21_option3" name="question21" value="3"> Sometimes
+        <input type="radio" id="q21_option4" name="question21" value="4"> Fairly Often
+        <input type="radio" id="q21_option5" name="question21" value="5"> Very Often<br>
+        <div class="line-space"></div>
+
+        <label for="question22">22: In the last 2 weeks, i have felt very restless aand fidgety.</label><br>
+        <input type="radio" id="q22_option1" name="question22" value="1"> Never
+        <input type="radio" id="q22_option2" name="question22" value="2"> Almost Never
+        <input type="radio" id="q22_option3" name="question22" value="3"> Sometimes
+        <input type="radio" id="q22_option4" name="question22" value="4"> Fairly Often
+        <input type="radio" id="q22_option5" name="question22" value="5"> Very Often<br>
+        <div class="line-space"></div>
+
+        <label for="question23">23: In the last 2 weeks, I have seen a change(increase or decrease) in my appetite.</label><br>
+        <input type="radio" id="q23_option1" name="question23" value="1"> Never
+        <input type="radio" id="q23_option2" name="question23" value="2"> Almost Never
+        <input type="radio" id="q23_option3" name="question23" value="3"> Sometimes
+        <input type="radio" id="q23_option4" name="question23" value="4"> Fairly Often
+        <input type="radio" id="q23_option5" name="question23" value="5"> Very Often<br>
+        <div class="line-space"></div>
+
+        <label for="question24">24: In the last 2 weeks, I have had trouble falling asleep.</label><br>
+        <input type="radio" id="q24_option1" name="question24" value="1"> Never
+        <input type="radio" id="q24_option2" name="question24" value="2"> Almost Never
+        <input type="radio" id="q24_option3" name="question24" value="3"> Sometimes
+        <input type="radio" id="q24_option4" name="question24" value="4"> Fairly Often
+        <input type="radio" id="q24_option5" name="question24" value="5"> Very Often<br>
+        <div class="line-space"></div>
+
+        <label for="question25">25: In the last 2 weeks, I have felt like I have low energy and am tired all the time.</label><br>
+        <input type="radio" id="q25_option1" name="question25" value="1"> Never
+        <input type="radio" id="q25_option2" name="question25" value="2"> Almost Never
+        <input type="radio" id="q25_option3" name="question25" value="3"> Sometimes
+        <input type="radio" id="q25_option4" name="question25" value="4"> Fairly Often
+        <input type="radio" id="q25_option5" name="question25" value="5"> Very Often<br>
+        <div class="line-space"></div>
+
+        <label for="question26">26: In the last month, I have felt so angry that it interferes with my daily life.</label><br>
+        <input type="radio" id="q26_option1" name="question26" value="1"> Never
+        <input type="radio" id="q26_option2" name="question26" value="2"> Almost Never
+        <input type="radio" id="q26_option3" name="question26" value="3"> Sometimes
+        <input type="radio" id="q26_option4" name="question26" value="4"> Fairly Often
+        <input type="radio" id="q26_option5" name="question26" value="5"> Very Often<br>
+        <div class="line-space"></div>
+
+        <label for="question27">27: In the last month, i have felt so angry that i have lost my appetite.</label><br>
+        <input type="radio" id="q27_option1" name="question27" value="1"> Never
+        <input type="radio" id="q27_option2" name="question27" value="2"> Almost Never
+        <input type="radio" id="q27_option3" name="question27" value="3"> Sometimes
+        <input type="radio" id="q27_option4" name="question27" value="4"> Fairly Often
+        <input type="radio" id="q27_option5" name="question27" value="5"> Very Often<br>
+        <div class="line-space"></div>
+
+        <label for="question28">28: In the last month, i have felt others are intentionally trying to make me angry all the time</label><br>
+        <input type="radio" id="q28_option1" name="question28" value="1"> Never
+        <input type="radio" id="q28_option2" name="question28" value="2"> Almost Never
+        <input type="radio" id="q28_option3" name="question28" value="3"> Sometimes
+        <input type="radio" id="q28_option4" name="question28" value="4"> Fairly Often
+        <input type="radio" id="q28_option5" name="question28" value="5"> Very Often<br>
+        <div class="line-space"></div>
+
+        <label for="question29">29: In the last month, i have felt so angry that i did not want to be around people.</label><br>
+        <input type="radio" id="q29_option1" name="question29" value="1"> Never
+        <input type="radio" id="q29_option2" name="question29" value="2"> Almost Never
+        <input type="radio" id="q29_option3" name="question29" value="3"> Sometimes
+        <input type="radio" id="q29_option4" name="question29" value="4"> Fairly Often
+        <input type="radio" id="q29_option5" name="question29" value="5"> Very Often<br>
+        <div class="line-space"></div>
+
+        <label for="question30">30: In the last month, i have felt so angry that i did not pay attention to my health and sleep patterns.</label><br>
+        <input type="radio" id="q30_option1" name="question30" value="1"> Never
+        <input type="radio" id="q30_option2" name="question30" value="2"> Almost Never
+        <input type="radio" id="q30_option3" name="question30" value="3"> Sometimes
+        <input type="radio" id="q30_option4" name="question30" value="4"> Fairly Often
+        <input type="radio" id="q30_option5" name="question30" value="5"> Very Often<br>
+        <div class="line-space"></div>
+    
+            <button type="button" id="calculate-button">Calculate Total Score</button>
+    
+        </form>
+        <!--<p>Total Score: <span id="totalScore">0</span> points</p>-->
+        <script src="script.js"></script>
+    </div>
+    </div>
+</body>
+</head>
